@@ -24,7 +24,7 @@ function preload() {
   // Load the json for the tiles sprite sheet
   loadJSON('tiles.json', function(tile_frames) {
     // Load tiles sprite sheet from frames array once frames array is ready
-    tile_sprite_sheet = loadSpriteSheet('tiles_spritesheet.png', tile_frames);
+    tile_sprite_sheet = loadSpriteSheet('test-spritesheet.png', tile_frames);
   });
 }
 
@@ -33,7 +33,7 @@ function setup() {
   background(0);
   // Draw the ground tiles
   for (var x = 0; x < TOTAL_COLUMNS; x++) {
-    drawTile('snow.png', x, TOTAL_ROWS - 1);
+    drawTile('ground.png', x, TOTAL_ROWS - 1);
     // rows[TOTAL_ROWS - 1][x] = 'snow.png';
   }
 
@@ -41,7 +41,7 @@ function setup() {
   drawTile('rock1.png', 0, TOTAL_ROWS - 2);
   // rows[TOTAL_ROWS - 2][0] = 'signRight.png';
   
-  drawTile('signExit.png', 0, 0);
+  drawTile('rock2.png', 0, 0);
   // rows[0][0] = 'signExit.png';
   
 
@@ -50,17 +50,17 @@ function setup() {
   drawTile('cactus1.png', 1, 1);
   // rows[1][1] = 'dirtCliffLeft.png';
 
-  drawTile('dirtCliffRight.png', 2, 1);
+  drawTile('cactus2.png', 2, 1);
   // rows[1][2] = 'dirtCliffRight.png';
 
   // drawTile('boxCoinAlt.png', 3, 1);
-  drawTile('boxCoinAlt.png', 4, 1);
+  drawTile('cactus3.png', 4, 1);
   // rows[1][4] = 'boxCoinAlt.png';
 
-  drawTile('grassCliffLeft.png', 4, 3);
+  drawTile('flower.png', 4, 3);
   // rows[3][4] = 'grassCliffLeft.png';
 
-  drawTile('grassCliffRight.png', 5, 3);
+  drawTile('flower.png', 5, 3);
   // rows[3][5] = 'grassCliffRight.png';
 
   console.log(rows);
