@@ -80,7 +80,7 @@ function draw() {
   //******
   //ellipse(camera.position.x, camera.position.y, 10, 10);
   //******
-  
+
   camera.position.x = this.player.posx;
   camera.position.y = this.player.posy + 50;
 }
@@ -135,14 +135,6 @@ class GameState{
     self.player.display();
 
   }
-
-  moveTo(xdiff,ydiff){
-
-    this.bg1.forEach(o => o.xpos+=xdiff);
-    this.bg1.forEach(o => o.posy += ydiff);
-    console.log("EPIC TIME");
-    //REMEMBER PARALLAX
-  }
   
 
 }
@@ -189,11 +181,7 @@ class Cactus{
     }*/
     //console.log("*******************************************************************************"); 
   }
-  moveTo(x,y){
-    this.xpos=x;
-    this.ypos=y;
-    console.log("AAAAAAMAMAMAMAMA");
-  }
+
   
 }
 class Player{
@@ -212,7 +200,6 @@ class Player{
   display(){
 
     this.gameState.inputs = this.inputs;
-    //this.gameState.moveTo(this.inputs[1],this.inputs[9]);
     this.posx += this.inputs[1];
 
 
